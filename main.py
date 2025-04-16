@@ -16,7 +16,8 @@ socketio = SocketIO(app)
 CORS(app)
 app.config['SECRET_KEY'] = 'your_secret_key'
 
-DB_CONN = "DRIVER={SQL Server};SERVER=104.247.167.130\\MSSQLSERVER2019;DATABASE=yazil112_learning;UID=yazil112_test2;PWD=GURkan5391"
+DB_CONN = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=104.247.167.130,1433;DATABASE=yazil112_learning;UID=yazil112_test2;PWD=GURkan5391"
+
 
 def db_connect():
     return pyodbc.connect(DB_CONN)
